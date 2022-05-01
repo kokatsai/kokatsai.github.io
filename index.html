@@ -4,3 +4,67 @@ $ git commit -m "add index"
 [master (root-commit) 80450b2] add index
  1 file changed, 10 insertions(+)
  create mode 100644 index.html
+
+<html>
+ <head>
+ <title>HW3</title>
+ <link rel="icon" href="others/anya15.png">
+ </head>
+ <body style="background-color:pale;"><H1>MyHomePage</H1>
+ <table border cellpadding=2 align="center">
+ <tr>
+  <td> 關於我 </td>
+  <td> <img src="others/哈哈是我啦.jpg" alt="哈哈是我啦" align=left  width="129.625" height="180.625"> 你好，我是蔡耕華，歡迎來到我的個人網頁。
+    <br>我畢業於<style style="text/css">
+        a{text-decoration:none;}
+        a:hover{color:red ;}
+</style>
+       <a href="https://www2.ck.tp.edu.tw/">建國中學</a>，現在是就讀<a href="https://www.ch.ntu.edu.tw/">台大化學系</a>的大二學生。
+    <br>我的興趣廣泛，主要有這三個：<br>
+    <a href="https://youtu.be/iTi8qaPi8MY">音樂</a>、<a href="https://steamcommunity.com/profiles/76561199159356863/">遊戲</a>、<a href="https://www.instagram.com/ckmemes_4th/">迷因</a>
+    <br>最近也稍微在研究點<a href="https://www.ptt.cc/bbs/Stock/index.html">股票</a>，
+    <br>很高興認識你。
+  </td>
+ </tr>
+ <tr>
+  <td> 酷酷的梗圖 </td>
+  <td><img src="others/期中好運名儒.jpg" alt="期中好運名儒" width="135.5" height="221.5">
+  <img src="others/身分認同.jpg" alt="身分認同" width="320" height="255" >
+</td>
+ </tr>
+ <tr>
+     <td>時間</td>
+     <td><div id="showbox"></div></td>
+ </tr>
+ </table>
+<audio autoplay loop id="vd" src="others/Leila.mp3"></audio>
+<script type="text/javascript">
+    window.onload = function(){
+             setInterval("toggleSound()",100);
+             ShowTime()
+        }
+
+    function toggleSound() {
+                var music = document.getElementById("vd"); 
+                    
+                if (music.paused) {
+                    music.paused=false;
+                    music.play();
+                }    
+                music.volume=0.5
+        }
+    function ShowTime(){
+　var NowDate=new Date();
+  var y=NowDate.getFullYear();
+  var mt=NowDate.getMonth();
+  var d=NowDate.getDate().toString().padStart(2, "0");
+　var h=NowDate.getHours().toString().padStart(2, "0");
+　var m=NowDate.getMinutes().toString().padStart(2, "0");
+　var s=NowDate.getSeconds().toString().padStart(2, "0");　
+　document.getElementById('showbox').innerHTML = (mt+1)+'-'+d+'-'+y+' '+h+':'+m+':'+s;
+　setTimeout('ShowTime()',1000);
+}
+</script>
+
+</body>
+</html>
